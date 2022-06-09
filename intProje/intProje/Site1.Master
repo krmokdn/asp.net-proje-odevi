@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="intProje.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="/masterPage/style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar">
+  <details class="navbar-sidebar navbar-details navbar-top-details">
+    <summary id="navbar-main-menu-title" class="navbar-details-title">Menu</summary>
+    <div class="navbar-details-content">
+      <ul aria-labelledby="navbar-main-menu-title">
+        <li><a href="#">About</a></li>
+           <!--
+        <li>
+          <details class="navbar-details">
+            <summary id="navbar-subsection-title" class="navbar-details-title">Portfolio</summary>
+             
+            <div class="navbar-details-content">
+              <ul aria-labelledby="navbar-subsection-title">
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+                <li><a href="#">Project 4</a></li>
+                <li><a href="#">Project 5</a></li>
+                <li><a href="#">Project 6</a></li>
+                <li><a href="#">Project 7</a></li>
+                <li><a href="#">Project 8</a></li>
+              </ul>
+            </div>
+           
+          </details>
+        </li>
+                 -->
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+  </details>
+  <div class="navbar-title"><a href="anaSayfa.aspx">Kerim Okudan</a></div>
+  <div class="navbar-horiz">
+    <ul class="navbar-horiz-list">
+        <li><a href="anaSayfa.aspx">Ana Sayfa</a></li>
+      <li><a href="hakkımdaSayfa.aspx">Hakkımda</a></li>
+        <!--
+      <li>
+        <details class="navbar-details navbar-top-details">
+          <summary id="navbar-portfolio-title" class="navbar-details-title">Portfolio</summary>
+          <div class="navbar-details-content">
+            <ul aria-labelledby="navbar-portfolio-title">
+              <li><a href="#">Project 1</a></li>
+              <li><a href="#">Project 2</a></li>
+              <li><a href="#">Project 3</a></li>
+              <li><a href="#">Project 4</a></li>
+              <li><a href="#">Project 5</a></li>
+              <li><a href="#">Project 6</a></li>
+              <li><a href="#">Project 7</a></li>
+              <li><a href="#">Project 8</a></li>
+            </ul>
+          </div>
+        </details>
+      </li>
+        -->
+      
+      <li><a href="WebForm1.aspx">Giriş Yap</a></li>
+      <li><a href="iletisimSayfa.aspx">İletişim</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<main>
+ <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</main>
+    
+</body>
+</html>

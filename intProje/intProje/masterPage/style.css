@@ -1,0 +1,143 @@
+/* The top navbar itself. */
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size: 1.5rem;
+    z-index: 999;
+    background-color: #fafafa;
+    color: #000000;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.1);
+    text-align: center;
+  }
+  
+  .navbar-title {
+    /*margin: 0 0 0 3rem;*/
+    margin: 0 auto 0 auto;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #000000;
+    padding: 0.75rem;
+  }
+  
+  /* Any direct children of the navbar should be 
+  * horizontal and aligned to top.
+  */
+  .navbar > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .navbar > .navbar-horiz {
+    display: none;
+  }
+  
+  /* Specific to the sidebar menu details. */
+  .navbar-sidebar {
+    width: 6rem;
+    position: absolute;
+    left: 0;
+    text-align: left;
+  }
+  
+  .navbar-details {
+    cursor: pointer;
+  }
+  
+  details.navbar-details > summary {
+    display: list-item;
+    padding-left: 0.5rem;
+  }
+  
+  /* The content of the details dropdown. */
+  .navbar-details-content {
+    background-color: #fafafa;
+    /*   background-color: #123456; */
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    overflow: visible;
+  }
+  
+  /*
+  * Position absolute so that it doesn't change
+  * the size of the header.
+  */
+  .navbar-top-details > .navbar-details-content {
+    position: absolute;
+    width: 13rem;
+  }
+  
+  /* When used as a sidebar, set height and width differently.
+  * We have the height as the viewport minus the top nav height.
+  * We also use a wider bar in this context.
+  */
+  .navbar-sidebar > .navbar-details-content {
+    height: calc(100vh - 3.75rem);
+    width: 15rem;
+    overflow: auto;
+  }
+  
+  /* Lists in the dropdowns have no style. */
+  .navbar-details-content > ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .navbar-details-content > ul > li {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  
+  /* For the horizontal list. */
+  .navbar-horiz, .navbar-horiz-list {
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+    margin: 0;
+    float: right;
+  }
+  
+  /* For the horizontal list. */
+  .navbar-horiz-list > li {
+    display: inline-block;
+    margin: 0 0.25rem 0 0.25rem;
+    height: 100%;
+  }
+  
+  /* For larger screens we:
+  * * turn off the sidebar
+  * * turn on horizontal nav
+  */
+  @media (min-width: 768px) {
+    .navbar {
+      text-align: left;
+    }
+  
+    .navbar-sidebar {
+      display: none;
+    }
+  
+    .navbar > .navbar-horiz {
+      display: inline-block;
+    }
+    .navbar-title {
+      margin: 0 0 0 2rem;
+    }
+  }
+  
+  /* General CSS for main demo content. */
+  main {
+    width: 50%;
+    margin: 4.5rem auto 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      width: 90%;
+      margin: 4.5rem auto 0 auto;
+    }
+  }
